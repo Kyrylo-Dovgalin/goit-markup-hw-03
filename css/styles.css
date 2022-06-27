@@ -315,7 +315,7 @@ body {
 }
 
 .services .item + .item {
-    margin-left: 45px;
+    margin-left: 45px; /*!!!!!*/
 }
 
 .services .no-gap {
@@ -365,7 +365,7 @@ body {
 }
 
 .team .item + .item {
-    margin-left: 40px;
+    margin-left: 40px; /*!!!!*/
 }
 
 .team .no-gap {
@@ -407,17 +407,30 @@ body {
     line-height: 1.16;
     text-align: center;
 
+    outline: 2px solid purple;
+
 }
 
 /* оформление списка фильтра */
 .filter {
     display: flex;
+    justify-content:center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
 
     list-style: none;
+
+    outline: 2px solid orange;
 }
 
 /* оформление кнопок фильтра */
 .filter-button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 22px;
+    padding-left: 22px;
+
     color: var(--button-text-color);
     font-family: 'Roboto';
     font-weight: 500;
@@ -426,6 +439,12 @@ body {
     /* identical to box height, or 162% */
     letter-spacing: 0.03em;
     cursor: pointer;
+
+    border-radius: 4px;
+}
+
+.filter .item:not(:last-child) {
+    margin-right: 8px;
 }
 
 
@@ -438,9 +457,40 @@ body {
 
 /* оформление списка проектов */
 .projects-list {
-    display: flex; /*!!!!!!!!!!*/
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 
     list-style: none;
+
+    outline: 2px solid green;
+}
+
+
+.projects-list .item {
+
+    width: calc ((100%-90px)/3); /*!!!!*/
+    margin-right: 45px; 
+    margin-bottom: 45px;
+
+    outline: 2px solid red;
+
+}
+
+.projects-list .item:nth-child(3n) {
+    margin-right: 0;
+
+}
+
+.projects-list .item:nth-child(n+6) {
+    margin-bottom: 0;
+
+}
+
+.projects-list .no-gap {
+    display: block;
+
 }
 
 /* оформление карточки проекта */
@@ -448,8 +498,18 @@ body {
     text-decoration: none;
 }
 
+.projects-list .desc {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+    
+    outline: 2px solid orange;
+}
 /* офрмление названия проекта */
 .projects-name {
+    margin: 0;
+
     color: var(--title-color);
     font-size: 18px;
     line-height: 2;
