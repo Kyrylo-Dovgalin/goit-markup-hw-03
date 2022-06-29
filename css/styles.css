@@ -255,6 +255,8 @@ body {
 
 /* Оформление заголовка преимуществ */
 .benefits .title {
+
+    display: none; /*временно*/
     margin: 0;
 
     color: var(--title-color);
@@ -274,6 +276,10 @@ body {
     list-style: none;
 
     /* outline: 2px solid yellow; */
+}
+
+.benefits .list-item {
+    width: 270px;
 }
 
 .benefits .list-item + .list-item {
@@ -420,6 +426,7 @@ body {
 }
 
 .projects .title {
+    display: none;
     margin: 0;
 
 
@@ -492,7 +499,7 @@ body {
 
 .projects-list .item {
 
-    width: calc((100%-60px)/3);
+    width: calc((100% - 60px)/3);
     margin-right: 30px; 
     margin-bottom: 30px;
 
@@ -535,6 +542,7 @@ body {
 /* офрмление названия проекта */
 .projects-name {
     margin: 0;
+    margin-bottom: 4px; 
 
     color: var(--title-color);
     font-size: 18px;
@@ -545,10 +553,14 @@ body {
 
 /* оформление типа проекта */
 .projects-type {
+   
+
     color:var(--text-color);
     font-size: 16px;
     line-height: 1.88;
     /* identical to box height, or 188% */
+
+    /* outline: 2px solid orange; */
 }
 
 /* оформление сотостояния карточки проекта */
@@ -597,7 +609,9 @@ body {
     display: inline-block;
         /*!!!!!!*/
     color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
     text-decoration: none;
+    
 
     /* outline: 2px solid white; */
 }
